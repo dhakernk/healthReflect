@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+	<title> Project 1</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/new.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<style type="text/css">
+	.n-logo {
+	    padding: 9px 0;
+	    display: block;
+	    float: left;
+	    width: 175px;
+	    margin-right: 28px;
+	    text-align: right;
+	    line-height: 100%;
+	    position: absolute;
+	    bottom: 0;
+	}
+	.icons {
+	    background-image: url("{% static 'images/shiksha-icons-sprite-2.png'%}");
+	    background-repeat: no-repeat;
+	    display: inline-block;
+	}
+	.ic_logo_prefix {
+	    width: 30px;
+	    background-position: -221px -55px;
+	    display: inline-block;
+	    position: absolute;
+	    left: 3px;
+	    bottom: 0;
+	    opacity: 1;
+	    transition: all .2s linear;
+	}
+	.ic_logo {
+	    height: 58px;
+	    width: 140px;
+	    background-position: -253px -55px;
+	    position: absolute;
+	    bottom: 0;
+	    left: 36px;
+	}
+	.n-header {
+	    max-width: 1330px;
+	    margin: auto;
+	}-
+	</style>
+
+</head>
+<body id="wrapperMainForCompleteShiksha" >
+<div  style="background-color: #007075;">
+  <div style="background-color: #007075;letter-spacing:4px;">
+	<div style="background-color: #007075;">
+		<div> 
+			<a href="https://www.google.com" title="">
+				<img src="{% static 'images/logo.png' %}" height="100px" title="logo">
+			</a>
+		</div>
+	</div>
+	<div class="pull-right w3-hide-small">
+	  <a href="#about" class="w3-bar-item w3-button">About</a>
+	  <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+	  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+	</div>
+  </div>
+</div>
+<!-- <div class="menu-overlay" style="top: 34px; z-index: 98; display: none;"></div> -->
+<div id="search-background-search-page" class="search-background-search-page-transition" style="background-image: url('{% static 'images/1508735570phpnAjF4G.jpeg' %}')" data-type="paid"> 
+	<div id="srch-content">
+		<div id="searchTabsV2" class="search-tabs">
+			<ul class="searchtab-links">
+				<li class="active">
+					<a href="javascript:void(0);" tabname="colleges">Colleges</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" tabname="careers">Careers</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" tabname="exams">Exams</a>
+				</li>
+			</ul>
+			<div class="searchtab-content">
+				<div class="search-form searchtab active">
+					<form formname="colleges" onsubmit="return false;" >{% csrf_token %}
+						<div class="shadow-box">
+							<div class="customsearch-fields">
+								<div class="search-refine-colleges no-fade">
+									<div tabindex="-1" style="position: relative">
+									 <!-- <div class="search-colg-overlaplayer"></div> --> 
+										<input placeholder="Find colleges, universities &amp; courses" autocomplete="off" name="search" id="searchby-college" type="text">
+										<span id="keywordCross" onclick="enableSearchInputBox();">
+											<i class="icons ic_close1"></i>
+										</span>
+									 <div id="search-college-layer" class="search-college-layer" style="display: none;"> </div> 
+									</div>
+								</div>
+								<div class="search-refine-locations">
+									<select class="chosen-select" multiple="true" tabindex="-1" style="display: none;">
+										<optgroup label="Popular Locations">
+											<option value="city_278">Bangalore</option>
+											<option value="city_12292">Chandigarh Tricity</option>
+											<option value="city_64">Chennai</option>
+											<option value="city_74">Delhi</option>
+											<option value="city_10223">Delhi / NCR</option>
+											<option value="city_702">Hyderabad</option>
+											<option value="city_130">Kolkata</option>
+											<option value="city_151">Mumbai</option>
+											<option value="city_10224">Mumbai ( All ) </option>
+											<option value="city_174">Pune</option>
+										</optgroup>
+										<optgroup label="Cities">
+											<option value="city_10585">Adipur</option>
+											<option value="city_28">Agartala</option>
+											<option value="city_29">Agra</option>
+											<option value="city_30">Ahmedabad</option>
+											<option value="city_31">Ahmednagar</option>
+											<option value="city_1100">Aizawl</option>
+											<option value="city_33">Ajmer</option>
+											<option value="city_822">Akola</option>
+											<option value="city_34">Aligarh</option>
+											<option value="city_10166">All over India</option>
+											<option value="city_35">Allahabad</option>
+											<option value="city_10191">Alleppey</option>
+											<option value="city_1113">Alwar</option>
+											<option value="city_36">Ambala</option>
+											<option value="city_823">Amravati</option>
+											<option value="city_37">Amritsar</option>
+											<option value="city_38">Anand</option>
+											<option value="city_39">Anantapur</option>
+										</optgroup>
+										<optgroup label="States">
+											<option value="state_100">Andhra Pradesh</option>
+											<option value="state_101">Arunachal Pradesh</option>
+											<option value="state_102">Assam</option>
+											<option value="state_103">Bihar</option>
+											<option value="state_104">Chhattisgarh</option>
+											<option value="state_136">Dadra And Nagar Haveli</option>
+											<option value="state_108">Goa</option>
+											<option value="state_109">Gujarat</option>
+											<option value="state_105">Haryana</option>
+											<option value="state_110">Himachal Pradesh</option>
+											<option value="state_111">Jammu and Kashmir</option>
+											<option value="state_112">Jharkhand</option>
+											<option value="state_106">Karnataka</option>
+											<option value="state_107">Kerala</option>
+											<option value="state_113">Madhya Pradesh</option>
+											<option value="state_114">Maharashtra</option>
+											<option value="state_115">Manipur</option>
+											<option value="state_116">Meghalaya</option>
+											<option value="state_117">Mizoram</option>
+											<option value="state_118">Nagaland</option>
+											<option value="state_119">Orissa</option>
+											<option value="state_120">Punjab</option>
+											<option value="state_121">Rajasthan</option>
+											<option value="state_122">Sikkim</option>
+										</optgroup>
+									</select>
+									<div class="chosen-container chosen-container-multi" style="width: 368px;" title="">
+										<ul class="chosen-choices">
+											<li class="search-field">
+												<input placeholder="Enter location" class="default" autocomplete="off" style="width:auto;!important" size="11" tabindex="-1" type="text">
+											</li>
+										</ul>
+										<div class="chosen-drop">
+											<ul class="chosen-results"></ul>
+										</div>
+									</div>
+									<div id="chosenMultiSelectBox" class="chosen-container chosen-container-multi" style="width: 368px; display: none;">
+										<ul class="chosen-choices" 
+										style="position: relative; overflow: hidden; margin: 0px 0px 0px 0px; background-color: #fff; cursor: text;">
+											<li class="search-field">
+												<input value="" placeholder="Enter location" class="default" autocomplete="off" style="padding: 0px 16px; outline: 0; background: transparent!important; box-shadow: none; color: #BFBFBF; font-size: 14px; border-radius: 0; border: 0px;" type="text">
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div id="submitButtonCollegeSearch" onclick="autoSuggestorInstanceArray.autoSuggestorInstanceSearch.handleInputKeys($j.Event( 'keypress', { keyCode: 13 } )); event.stopPropagation();" class="custom-searchbn"> Search </div>
+								<input value="" id="submit_query" style="display:none;" type="submit"> 
+							</div>
+										<!-- <div id="coursesAdvanceOptions" class="search-listfileds slideClose"> <p id="customsearch-title">Advanced Options :</p> <div class="ext-options"> <div class="customsearch-exam dropDown"> <select id="dropDown1" class="custom-select-exam" style="display: none;"> </select> </div> <div class="customsearch-fees dropDown"> <select id="dropDown2" class="custom-select-fees" style="display: none;"> </select> </div> <div class="customsearch-specialisation dropDown"> <select id="dropDown3" class="custom-select-spec" style="display: none;"> </select> </div> </div> </div> -->
+
+									<!-- 	<div id="instituteAdvanceOptions" class="search-listfileds slideClose"> <p id="customsearch-title">Advanced Options :</p> <div class="ext-options"> <div class="customsearch-exam dropDown"> <div class="SumoSelect" tabindex="0"><select id="selectInstituteCategory" onchange="populateCourseList();" placeholder="Choose Stream" class="custom-select-normal" style="display: none; width: 359px;"> <option disabled="disabled" selected="selected" value=""></option> </select><p class="CaptionCont SlectBox" style="display: none; width: 359px;"><span class="placeholder">Choose Stream</span><label><i class="icons ic_dropdownsumo"></i></label></p><div class="optWrapper"><ul class="options"><li data-val="" class="disabled"><label></label></li></ul></div></div> </div> <div class="customsearch-specialisation dropDown"> <div class="SumoSelect" tabindex="0"><select id="selectInstituteCourse" placeholder="Select Course" class="custom-select-normal" style="display: none; width: 359px;"> <option disabled="disabled" selected="selected" value=""></option> </select><p class="CaptionCont SlectBox" style="display: none; width: 359px;"><span class="placeholder">Select Course</span><label><i class="icons ic_dropdownsumo"></i></label></p><div class="optWrapper"><ul class="options"><li data-val="" class="disabled"><label></label></li></ul></div></div> </div> </div> </div> -->
+									</div>
+								</form>
+							</div>
+							<div class="search-form tab">
+								<form formname="careers" onsubmit="return false;" class="shadow-box">
+									<div class="customsearch-fields">
+										<div class="search-refine-colleges no-fade"><div tabindex="-1" style="position: relative">
+											<input placeholder="Enter a career that you are interested in... (E.g. Engineer, Doctor)" autocomplete="off" name="search" id="searchby-career" type="text"><div id="search-career-layer" class="search-college-layer" style="display: none;"></div>
+										</div>
+									</div>
+									<div class="custom-searchbn" onclick="submitCareersSearch(); event.stopPropagation();">Search<input class="orange f18" value="" id="submit_careers" type="button">
+									</div>
+									</div>
+								</form>
+							</div>
+							<div class="search-form tab">
+								<form formname="exams" onsubmit="return false;" class="shadow-box">
+									<div class="customsearch-fields"> 
+										<div class="search-refine-colleges no-fade"> 
+											<div tabindex="-1" style="position: relative">
+												<input placeholder="Find exams by name or course..." autocomplete="off" name="search" id="searchby-exam" type="text">
+											 	<div id="search-exam-layer" class="search-college-layer" style="display: none;"> 
+												</div> 
+											</div>
+										</div> 
+									<div class="custom-searchbn" onclick="submitExamsSearch(); event.stopPropagation();"> Search <input class="orange f18" value="" id="submit_exams" type="button"> 
+									</div> 
+								</div> 
+							</form> 
+						</div> 
+					</div> 
+				</div> 
+			</div> 
+			<a href="" rel="nofollow" target="_blank" class="cover-banner-link">
+				<span style="position:relative;">Management Development Institute (MDI), Gurgaon Haryana&nbsp;</span><span class="cover-banner-text-span">(view details)</span>
+			</a> 
+			<div class="homePageBannerOvrly"></div> 
+		</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<li style="width: 248.2px;">
+					<a href="" target="_blank" rel="nofollow">
+						<div>
+							<h5 class="">Garden City University<br/><b>Banglore</b></h1>
+							<p> ABC</p>
+						</div>
+					</a>
+				</li>
+			</div>
+			<div class="col-sm-2">
+				<li style="width: 248.2px;">
+					<a href="" target="_blank" rel="nofollow">
+						<div>
+							<h5 class="">Garden City University<br/><b>Banglore</b></h1>
+							<p> Hydrabad</p>
+						</div>
+					</a>
+				</li>
+			</div>
+			<div class="col-sm-2">
+				<li style="width: 248.2px;">
+					<a href="" target="_blank" rel="nofollow">
+						<div>
+							<h5 class="">XLRI  | XAT <br/><b>Banglore</b></h1>
+							<p> Mumbai</p>
+						</div>
+					</a>
+				</li>
+			</div>
+			<div class="col-sm-2">
+				<li style="width: 248.2px;">
+					<a href="" target="_blank" rel="nofollow">
+						<div>
+							<h5 class="">SDMIMD<br/><b>pune</b></h1>
+							<p> </p>
+						</div>
+					</a>
+				</li>
+			</div>
+			<div class="col-sm-2">
+				<li style="width: 248.2px;">
+					<a href="" target="_blank" rel="nofollow">
+						<div>
+							<h5 class="">Garden City University<br/><b>Banglore</b></h1>
+							<p> Delhi</p>
+						</div>
+					</a>
+				</li>
+			</div>
+			<div class="col-sm-2">
+				<li style="width: 248.2px;">
+					<a href="" target="_blank" rel="nofollow">
+						<div>
+							<h5 class="">T. A. Pai Management Institute (TAPMI)<br/><b>Manipal</b></h1>
+							<p> Goa</p>
+						</div>
+					</a>
+				</li>
+			</div>
+
+	  </div>
+	</div>
+	<section class="Msgbanner">
+		<div class="_cntr">
+			<h1>
+			Empowering millions of students in making the right career and college decision
+			</h1>
+		</div>
+	</section>
+</body>
+</html>
+<script type="text/javascript">
+	$('.searchtab-links li a').on("click", function(event){
+		$(".searchtab-links li").removeClass("active");
+		$(event.target.parentNode).addClass("active");
+		var sectionName = $(event.target).attr("tabname");
+		$(".search-form").removeClass("active");
+		$(".search-form").removeClass("searchtab");
+		$(".search-form").addClass("tab");
+		$(".search-form form[formname='"+sectionName+"']").parent().addClass("searchtab active");
+	})
+	
+	var csrf_tokensss = jQuery("[name=csrfmiddlewaretoken]").val(); //$("input[name='csrfmiddlewaretoken']").val();
+
+	$("#searchby-college").keyup(function(e){
+		var inputVal= e.target.value;
+		getCollageData(inputVal);
+	})
+
+	// $("#searchby-college").focus(getCollageData(''));
+
+	function getCollageData(data){
+		requestAjax("/getTopCollageList", {search:data}, 'collage');
+	}
+
+	function showResponse(response){
+		var resultHeading = response['index'];
+		var html = "";
+		Object.keys(response['result']).map(function(key){
+			html += "<span class='group-select'>"+resultHeading[key]+"</span>";
+			response['result'][key].map(function(value,key){
+				html += "<li title="+value+" class='suggestion-box-normal-option' style='cursor: pointer;'><span>"+value+"</span></li>";
+			});
+		});
+		$("#search-college-layer").html(html);
+		$("#search-college-layer").css('display', 'inline-block');
+	}
+	function update(){
+		$("#search-college-layer li").on("click", function(event){
+			// $("#searchby-college").val(event.target.title)
+		})
+	}
+
+	$("#searchby-exam").keyup(function(e){
+		var inputVal= e.target.value;
+		getExamData(inputVal);	
+	});
+	// $("searchby-exam").focus(getExamData(''));
+
+	function getExamData(data){
+		requestAjax('/getExamList',{search:data}, 'exams')	
+	}
+
+	$("#searchby-career").keyup(function(e){
+		var inputVal= e.target.value;
+		getCareerData(inputVal);	
+	});
+
+	// $("searchby-career").focus(getCareerData(''));
+
+	function getCareerData(data){
+		requestAjax('/getCareerList',{search:data}, 'career')	
+	}
+
+	function requestAjax(url, input, type){
+		$.ajax({
+			url: url,
+			type:"post",
+			data:input,
+			beforeSend:function(xhr){xhr.setRequestHeader('X-CSRFToken',csrf_tokensss)},
+			success:function(response){
+				// console.log(response);
+				if(type === "collage"){
+					showResponse(response);
+				}else if(type === "career"){
+					showCareerResponse(response);
+				}else {
+					showExamResponse(response);
+				}
+			},error:function(err){
+				console.log("err"+err);
+			}
+		});
+	}
+
+	function showCareerResponse(response){
+		html =  formatResponse(response);
+		$("#search-career-layer").html(html);
+		$("#search-career-layer").css('display', 'inline-block');
+	}
+	function showExamResponse(response){
+		html =  formatResponse(response);
+		$("#search-exam-layer").html(html);
+		$("#search-exam-layer").css('display', 'block');
+	}
+	function formatResponse(response){
+		var html = "";
+		if(response.index !== undefined){
+			var resultHeading = response['index'];
+			html += "<span class='group-select'>"+resultHeading[1]+"</span>";
+		}
+		response['result'][1].map(function(value, key){
+				html += "<li title="+value+" class='suggestion-box-normal-option' style='cursor: pointer;'><span>"+value+"</span></li>";
+		});
+		return html;
+	}
+
+	var staticImagesArr = ['1459318264phpOjE4ZG.jpeg', '1459318278phpmexk3j.jpeg','1508735570phpnAjF4G.jpeg'];
+	var staticPath = "{% static 'images/' %}";
+	setInterval(function(){
+		var randomNo = Math.floor(Math.random() * staticImagesArr.length);
+		$("#search-background-search-page").css({"background-image": "url("+staticPath+staticImagesArr[randomNo]+")"});
+	}, 4000);
+</script>
