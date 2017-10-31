@@ -1,14 +1,14 @@
-#Welcome to This Simple App.
+Welcome to This Simple App.
 
-#This app requires Python and Django pip and  Git
+This app requires Python and Django pip and  Git
 
-#For Linux Install git using:
+For Linux Install git using:
 sudo apt-get install git
 
-#For other OS download Git From here https://git-scm.com/downloads
+For other OS download Git From here https://git-scm.com/downloads
 
 
-#First, update your local package index with apt, and then install the python-django package:
+First, update your local package index with apt, and then install the python-django package:
 
 sudo apt-get update
 sudo apt-get install python-django
