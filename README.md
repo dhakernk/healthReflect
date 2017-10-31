@@ -2,7 +2,7 @@ Welcome to This Simple App.
 
 This app requires Python and Django pip and  Git
 
-For Linux Install git using:
+For Linux Install git using: <br/>
 sudo apt-get install git
 
 For other OS download Git From here https://git-scm.com/downloads
