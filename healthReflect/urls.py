@@ -22,6 +22,7 @@ from django.conf.urls import patterns, url
 # from homepage import views
 
 urlpatterns = [
+	url(r'^$', "homepage.views.index", name='index'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^getTopCollageList$', 'homepage.views.getTopCollageList'),
     url(r'^getCareerList$', 'homepage.views.getCareerList'),
