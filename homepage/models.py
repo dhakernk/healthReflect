@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 class TopResultType(models.Model):
 	"""docstring for topResultType"""
-	resultId = models.IntegerField(primary_key=True, max_length=5)
+	resultId = models.IntegerField(primary_key=True)
 	resultTopic = models.CharField(blank=False, max_length=250)
 	def __unicode__(self):
 		return self.resultId
@@ -17,8 +17,8 @@ class TopResultType(models.Model):
 
 class TopResultMapping(models.Model):
 	"""result Table"""
-	id = models.IntegerField(primary_key=True, max_length=10)
-	resultType = models.IntegerField(blank=False,  max_length=5)
+	id = models.IntegerField(primary_key=True)
+	resultType = models.IntegerField(blank=False)
 	# resultType = models.ForeignKey(TopResultType, to_field=resultId, max_length=5)
 	resultName = models.CharField(blank=True, max_length=250)
 	def __unicode__(self):
