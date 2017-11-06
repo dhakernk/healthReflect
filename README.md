@@ -1,12 +1,17 @@
 ## Welcome to This Simple App. ##
 
-This app requires Python and Django pip and  Git
+This app requires Python and Django pip and  Git, numpy
 
 For Linux Install git using: <br/>
 sudo apt-get install git
 
 For other OS download Git From here https://git-scm.com/downloads
 
+Install Numpy 
+> sudo pip install numpy== 1.13.3
+
+Install ipython 
+> sudo pip install ipython==5.5.0
 
 First, update your local package index with apt, and then install the python-django package:
 
@@ -25,7 +30,7 @@ Now you can install pip. If you plan on using Python version 2, install using th
 > sudo apt-get install python-pip
 
 Fast Approximate String Matching in a Dictionary, Used in Searching string, Install fuzzywazzy<br/>
-> pip install fuzzywuzzy
+> pip install fuzzywuzzy==0.15.1
 
 
 You have installed all packages and Dependancies 
